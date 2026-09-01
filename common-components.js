@@ -103,32 +103,52 @@ const commonStyles = `
             margin: 0;
             padding: 0;
             display: flex;
+            align-items: center; /* Force all nav items to align on the same baseline */
             list-style: none;
             gap: 0;
         }
 
         .nav-item {
             position: relative;
+            display: flex;
+            align-items: center;
         }
 
-        .nav-link {
-            display: block;
-            padding: 16px 20px;
-            color: #1a3a52;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+        /* Universal style normalizing both <a> links and <button> dropdown toggles */
+        
+        .nav-link,
+        a.nav-link,
+        button.nav-link,
+        .nav-link:link,
+        .nav-link:visited {
+            display: inline-flex !important;
+            align-items: center !important;
+            padding: 16px 20px !important;
+            color: #1a3a52 !important;
+            text-decoration: none !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 500 !important; /* Explicitly sets exact medium weight for all tags */
+            -webkit-font-smoothing: antialiased; /* Normalizes font thickness across Chrome/Safari */
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1 !important;
             transition: background-color 0.3s ease, color 0.3s ease;
             cursor: pointer;
             border: none;
             background: none;
-            width: 100%;
-            text-align: left;
+            outline: none;
+            vertical-align: middle;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            box-sizing: border-box;
         }
 
-        .nav-link:hover {
-            background-color: #f0f0f0;
-            color: #2c5aa0;
+        .nav-link:hover,
+        a.nav-link:hover,
+        button.nav-link:hover {
+            background-color: #f0f0f0 !important;
+            color: #2c5aa0 !important;
         }
 
         /* Dropdown Menu */
@@ -157,6 +177,7 @@ const commonStyles = `
             color: #333;
             text-decoration: none;
             font-size: 13px;
+            font-family: inherit;
             transition: background-color 0.3s ease;
             border: none;
             background: none;
@@ -287,15 +308,6 @@ const headerHTML = `
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="clientele.html">Clientele</a>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" onclick="toggleDropdown(event, 'kb-menu')">Knowledge Bank</button>
-                    <div class="dropdown" id="kb-menu">
-                        <a class="dropdown-item" href="#articles">Articles & Insights</a>
-                        <a class="dropdown-item" href="#updates">Tax Updates</a>
-                        <a class="dropdown-item" href="#publications">Publications</a>
-                        <a class="dropdown-item" href="#faqs">FAQs</a>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact-us.html">Contact Us</a>
