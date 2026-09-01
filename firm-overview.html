@@ -113,18 +113,26 @@
         }
 
         .nav-link {
-            display: block;
+            display: inline-flex;
+            align-items: center;
             padding: 16px 20px;
             color: #1a3a52;
             text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
             font-weight: 500;
+            line-height: 1;
             transition: background-color 0.3s ease, color 0.3s ease;
             cursor: pointer;
             border: none;
             background: none;
-            width: 100%;
             text-align: left;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .nav-link:hover {
@@ -345,7 +353,7 @@
     <!-- Header Section with Logo and Navigation -->
     <div class="header-section">
         <div class="logo-section">
-            <div class="logo">K&K</div>
+            <img src="CA_India_Logo.jpg" alt="Kishore & Kishore Logo" class="logo">
             <div class="firm-info">
                 <h1>Kishore & Kishore</h1>
                 <p>Chartered Accountants</p>

@@ -221,32 +221,96 @@ const commonStyles = `
         }
 
         @media (max-width: 768px) {
+            /* Compact Info Bar - Keeps all details visible in a clean 2x2 grid */
             .top-info-bar {
-                gap: 15px;
-                justify-content: center;
-                flex-direction: column;
+                padding: 8px 12px;
+                font-size: 11px;
+                justify-content: space-between;
+                gap: 6px 12px;
             }
 
+            .info-item {
+                gap: 5px;
+            }
+
+            /* Compact Main Header Section */
             .header-section {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-                gap: 15px;
+                padding: 12px 15px;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
             }
 
+            .logo-section {
+                gap: 10px;
+            }
+
+        .logo {
+            height: 60px;          /* Fixed clean height */
+            width: auto;           /* Width adjusts automatically to prevent distortion */
+            max-width: 140px;      /* Keeps rectangular logos from taking over the header */
+            object-fit: contain;
+            background: transparent;
+            border-radius: 0;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        /* Mobile responsive adjustment */
+        @media (max-width: 768px) {
+            .logo {
+                height: 40px;      /* Scaled down height for phone screens */
+                width: auto;
+                max-width: 90px;
+            }
+        }
+
+            .firm-info h1 {
+                font-size: 18px;
+                margin-bottom: 2px;
+            }
+
+            .firm-info p {
+                font-size: 11px;
+            }
+
+            /* Touch-Friendly Horizontal Swipe Navigation */
             .nav-wrapper {
                 width: 100%;
-                justify-content: flex-start;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Hide scrollbar for Firefox */
+                background: #f0f4f8;
+                border-top: 1px solid #e2e8f0;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .nav-wrapper::-webkit-scrollbar {
+                display: none; /* Hide scrollbar for Chrome/Safari */
             }
 
             .navbar {
-                flex-wrap: wrap;
-                width: 100%;
+                display: flex;
+                flex-wrap: nowrap; /* Keeps all links strictly on 1 row */
+                width: max-content;
+                padding: 0 5px;
             }
 
-            .nav-link {
-                padding: 12px 15px;
-                font-size: 13px;
+            .nav-link,
+            a.nav-link,
+            button.nav-link {
+                padding: 12px 14px !important;
+                font-size: 13px !important;
+                white-space: nowrap; /* Prevents awkward text wrapping */
+            }
+
+            /* Mobile Dropdown adjustment */
+            .dropdown {
+                position: fixed;
+                top: auto;
+                left: 5% !important;
+                width: 90% !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             }
         }
     </style>
@@ -273,7 +337,7 @@ const headerHTML = `
     <!-- Header Section with Logo and Navigation -->
     <div class="header-section">
         <div class="logo-section">
-            <div class="logo">K&K</div>
+            <img src="CA_India_Logo.jpg" alt="Kishore & Kishore Logo" class="logo">
             <div class="firm-info">
                 <h1>Kishore & Kishore</h1>
                 <p>Chartered Accountants</p>
