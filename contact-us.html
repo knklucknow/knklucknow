@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishore & Kishore | Chartered Accountants</title>
+    <title>Contact Us | Kishore & Kishore | Chartered Accountants</title>
     <style>
         * {
             margin: 0;
@@ -186,6 +186,28 @@
             }
         }
 
+        /* Page Hero Section */
+        .page-hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
         /* Main Content */
         .main-content {
             max-width: 1200px;
@@ -193,154 +215,125 @@
             padding: 0 20px;
         }
 
-        .page-title {
+        /* Map Section */
+        .map-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease-out 0.1s backwards;
+            margin-bottom: 60px;
             text-align: center;
-            margin-bottom: 50px;
-            animation: fadeInUp 0.6s ease-out;
         }
 
-        .page-title h1 {
-            font-size: 42px;
+        .map-section h2 {
             color: #1a3a52;
-            margin-bottom: 10px;
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .map-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .map-container iframe {
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+        }
+
+        /* Branches Section */
+        .branches-section {
+            animation: fadeInUp 0.6s ease-out 0.2s backwards;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3a52;
+            font-size: 32px;
+            margin-bottom: 50px;
             font-weight: 700;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2c5aa0;
         }
 
-        .page-title p {
-            font-size: 16px;
-            color: #666;
-            font-weight: 300;
-        }
-
-        .cards-grid {
+        .branches-container {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
 
-        .card {
+        .branch-card {
             background: white;
             border-radius: 10px;
-            overflow: hidden;
+            padding: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            cursor: pointer;
             animation: fadeInUp 0.6s ease-out forwards;
             opacity: 0;
-            display: flex;
-            gap: 0;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .card:nth-child(1) { animation-delay: 0.1s; }
-        .card:nth-child(2) { animation-delay: 0.2s; }
-        .card:nth-child(3) { animation-delay: 0.3s; }
-        .card:nth-child(4) { animation-delay: 0.4s; }
-        .card:nth-child(5) { animation-delay: 0.5s; }
-        .card:nth-child(6) { animation-delay: 0.6s; }
-        .card:nth-child(7) { animation-delay: 0.7s; }
-        .card:nth-child(8) { animation-delay: 0.8s; }
-        .card:nth-child(9) { animation-delay: 0.9s; }
-
-        .card:hover {
+        .branch-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .card-image {
-            width: 40%;
-            height: 250px;
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 80px;
-            font-weight: 700;
-            position: relative;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
+        .branch-card:nth-child(1) { animation-delay: 0.3s; }
+        .branch-card:nth-child(2) { animation-delay: 0.4s; }
+        .branch-card:nth-child(3) { animation-delay: 0.5s; }
 
-        .card-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
-        }
-
-        .card-image-placeholder {
-            position: relative;
-            z-index: 1;
-        }
-
-        .card-content {
-            padding: 30px;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card-content h3 {
-            font-size: 24px;
+        .branch-card .branch-name {
             color: #1a3a52;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .card-content .designation {
-            font-size: 13px;
-            color: #2c5aa0;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 24px;
+            font-weight: 700;
             margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2c5aa0;
         }
 
-        .card-content .contact {
-            font-size: 12px;
+        .branch-info {
+            margin-bottom: 12px;
             color: #666;
+            font-size: 14px;
             line-height: 1.6;
-            margin-bottom: 15px;
         }
 
-        .card-content .bio {
-            font-size: 14px;
+        .branch-info-label {
+            font-weight: 600;
+            color: #1a3a52;
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        .branch-info-value {
             color: #777;
-            line-height: 1.8;
-            min-height: auto;
+            margin-left: 0;
         }
 
-        .card-footer {
-            display: flex;
-            gap: 10px;
-            padding-top: 15px;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .social-link {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
+        .contact-link {
             color: #2c5aa0;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .social-link:hover {
-            background: #2c5aa0;
-            color: white;
-            transform: scale(1.1);
+        .contact-link:hover {
+            color: #1a3a52;
+            text-decoration: underline;
+        }
+
+        .contact-person {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 4px solid #2c5aa0;
         }
 
         /* Footer */
@@ -350,105 +343,11 @@
             text-align: center;
             padding: 40px 20px;
             font-size: 13px;
+            margin-top: 60px;
         }
 
         .footer p {
             margin: 8px 0;
-        }
-
-        /* Banner Section */
-        .banner {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect fill="%231a3a52" width="1200" height="500"/><text x="50%" y="50%" font-size="48" fill="white" text-anchor="middle" dominant-baseline="middle" font-family="Arial">Banner Photo Placeholder</text></svg>');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .banner-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .banner-content p {
-            font-size: 24px;
-            font-weight: 300;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Core Values Section */
-        .core-values {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8f9fa" width="1200" height="600"/><text x="50%" y="50%" font-size="48" fill="%23999" text-anchor="middle" dominant-baseline="middle" font-family="Arial">Core Values Background Photo</text></svg>');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        .core-values-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .core-values-title {
-            color: white;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .value-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .value-card:nth-child(1) { animation-delay: 0.1s; }
-        .value-card:nth-child(2) { animation-delay: 0.2s; }
-        .value-card:nth-child(3) { animation-delay: 0.3s; }
-        .value-card:nth-child(4) { animation-delay: 0.4s; }
-
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .value-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .value-card h3 {
-            font-size: 22px;
-            color: #1a3a52;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .value-card p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.7;
         }
 
         @keyframes fadeInUp {
@@ -491,55 +390,33 @@
                 font-size: 13px;
             }
 
-            .page-title h1 {
+            .page-hero {
+                padding: 50px 20px;
+            }
+
+            .page-hero h1 {
                 font-size: 32px;
             }
 
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .page-hero p {
+                font-size: 16px;
             }
 
-            .card {
-                flex-direction: column;
-            }
-
-            .card-image {
-                width: 100%;
-                height: 200px;
-                font-size: 60px;
-            }
-
-            .card-content {
-                width: 100%;
+            .map-section {
                 padding: 20px;
             }
 
-            .banner {
+            .map-container iframe {
                 height: 300px;
             }
 
-            .banner-content h1 {
-                font-size: 32px;
-            }
-
-            .banner-content p {
-                font-size: 18px;
-            }
-
-            .core-values {
-                padding: 50px 20px;
-                background-attachment: scroll;
-            }
-
-            .core-values-title {
-                font-size: 28px;
-                margin-bottom: 30px;
-            }
-
-            .values-grid {
+            .branches-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
+            }
+
+            .section-title {
+                font-size: 24px;
             }
         }
     </style>
@@ -601,7 +478,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="clientele.html">Clientele</a>
                 </li>
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <button class="nav-link" onclick="toggleDropdown(event, 'kb-menu')">Knowledge Bank</button>
                     <div class="dropdown" id="kb-menu">
                         <a class="dropdown-item" href="#articles">Articles & Insights</a>
@@ -609,7 +486,7 @@
                         <a class="dropdown-item" href="#publications">Publications</a>
                         <a class="dropdown-item" href="#faqs">FAQs</a>
                     </div>
-                </li> -->
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact-us.html">Contact Us</a>
                 </li>
@@ -617,38 +494,93 @@
         </div>
     </div>
 
-    <!-- Banner Section -->
-    <div class="banner" id="home">
-        <div class="banner-content">
-            <h1>Kishore & Kishore</h1>
-            <p>Excellence in Chartered Accountancy</p>
-        </div>
+    <!-- Page Hero Section -->
+    <div class="page-hero">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team at any of our locations</p>
     </div>
 
-    <!-- Core Values Section -->
-    <div class="core-values">
-        <div class="core-values-container">
-            <h2 class="core-values-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Integrity</h3>
-                    <p>We maintain the highest standards of professional integrity and ethical conduct in all our dealings.</p>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Map Section -->
+        <div class="map-section">
+            <h2>📍 Our Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.7895878903347!2d80.95149111087316!3d26.83961949999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfc09d5c12345%3A0x1234567890abcdef!2sC-7%2C%20Sector%20'E'%20(New)%2C%20Aliganj%2C%20Lucknow!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Branches Section -->
+        <div class="branches-section">
+            <h2 class="section-title">Our Branches</h2>
+            <div class="branches-container">
+                <!-- Branch 1 -->
+                <div class="branch-card">
+                    <div class="branch-name">Lucknow Office</div>
+                    <div class="branch-info">
+                        <span class="branch-info-label">📍 Location:</span>
+                        <span class="branch-info-value">C-7, Sector 'E' (New), Aliganj, Lucknow, Uttar Pradesh 226024</span>
+                    </div>
+                    <div class="branch-info">
+                        <span class="branch-info-label">📞 Contact Details:</span>
+                        <span class="branch-info-value">
+                            <a href="tel:+91-0522-2XXX-XXXX" class="contact-link">+91-0522-2XXX-XXXX</a>
+                        </span>
+                    </div>
+                    <div class="contact-person">
+                        <span class="branch-info-label">👤 Concerned Person:</span>
+                        <span class="branch-info-value">Add Name Here</span>
+                        <span class="branch-info-label">✉️ Email:</span>
+                        <span class="branch-info-value">
+                            <a href="mailto:lucknow@kishoreckishore.com" class="contact-link">lucknow@kishoreckishore.com</a>
+                        </span>
+                    </div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">💼</div>
-                    <h3>Expertise</h3>
-                    <p>Our team brings extensive knowledge and experience in accounting, auditing, and financial advisory services.</p>
+
+                <!-- Branch 2 -->
+                <div class="branch-card">
+                    <div class="branch-name">Branch 2</div>
+                    <div class="branch-info">
+                        <span class="branch-info-label">📍 Location:</span>
+                        <span class="branch-info-value">Add location details here</span>
+                    </div>
+                    <div class="branch-info">
+                        <span class="branch-info-label">📞 Contact Details:</span>
+                        <span class="branch-info-value">
+                            <a href="tel:+91-XXXX-XXXX-XXXX" class="contact-link">+91-XXXX-XXXX-XXXX</a>
+                        </span>
+                    </div>
+                    <div class="contact-person">
+                        <span class="branch-info-label">👤 Concerned Person:</span>
+                        <span class="branch-info-value">Add Name Here</span>
+                        <span class="branch-info-label">✉️ Email:</span>
+                        <span class="branch-info-value">
+                            <a href="mailto:branch2@kishoreckishore.com" class="contact-link">branch2@kishoreckishore.com</a>
+                        </span>
+                    </div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Client Focus</h3>
-                    <p>We prioritize our clients' needs and deliver customized solutions tailored to their unique business challenges.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🚀</div>
-                    <h3>Innovation</h3>
-                    <p>We embrace modern technologies and innovative approaches to provide cutting-edge financial solutions.</p>
+
+                <!-- Branch 3 -->
+                <div class="branch-card">
+                    <div class="branch-name">Branch 3</div>
+                    <div class="branch-info">
+                        <span class="branch-info-label">📍 Location:</span>
+                        <span class="branch-info-value">Add location details here</span>
+                    </div>
+                    <div class="branch-info">
+                        <span class="branch-info-label">📞 Contact Details:</span>
+                        <span class="branch-info-value">
+                            <a href="tel:+91-XXXX-XXXX-XXXX" class="contact-link">+91-XXXX-XXXX-XXXX</a>
+                        </span>
+                    </div>
+                    <div class="contact-person">
+                        <span class="branch-info-label">👤 Concerned Person:</span>
+                        <span class="branch-info-value">Add Name Here</span>
+                        <span class="branch-info-label">✉️ Email:</span>
+                        <span class="branch-info-value">
+                            <a href="mailto:branch3@kishoreckishore.com" class="contact-link">branch3@kishoreckishore.com</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
