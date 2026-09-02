@@ -242,43 +242,44 @@
         }
 
         .map-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        
         .map-container iframe {
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    width: 100%;
-    max-width: 800px;
-    height: 380px; /* Controlled height for a balanced look */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
-}
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            width: 100%;
+            max-width: 800px;
+            height: 380px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+        }
 
-.map-directions-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: #1a3a52;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    letter-spacing: 0.3px;
-    box-shadow: 0 2px 6px rgba(26, 58, 82, 0.15);
-    transition: all 0.25s ease;
-}
+        .map-directions-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #1a3a52;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 6px rgba(26, 58, 82, 0.15);
+            transition: all 0.25s ease;
+        }
 
-.map-directions-btn:hover {
-    background-color: #2c5aa0;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(44, 90, 160, 0.25);
-    color: #ffffff;
-}
+        .map-directions-btn:hover {
+            background-color: #2c5aa0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(44, 90, 160, 0.25);
+            color: #ffffff;
+        }
 
         /* Branches Section */
         .branches-section {
@@ -317,9 +318,9 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .branch-card:nth-child(1) { animation-delay: 0.3s; }
-        .branch-card:nth-child(2) { animation-delay: 0.4s; }
-        .branch-card:nth-child(3) { animation-delay: 0.5s; }
+        .branch-card:nth-child(1) { animation-delay: 0.1s; }
+        .branch-card:nth-child(2) { animation-delay: 0.2s; }
+        .branch-card:nth-child(3) { animation-delay: 0.3s; }
 
         .branch-card .branch-name {
             color: #1a3a52;
@@ -492,7 +493,6 @@
                     <button class="nav-link" onclick="toggleDropdown(event, 'about-menu')">About Us</button>
                     <div class="dropdown" id="about-menu">
                         <a class="dropdown-item" href="firm-overview.html">Firm Overview</a>
-                        
                     </div>
                 </li>
                 <li class="nav-item">
@@ -527,96 +527,30 @@
     <div class="main-content">
         <!-- Map Section -->
         <div class="map-section">
-    <h2>📍 Our Location</h2>
-    <div class="map-container">
-        <iframe 
-            src="https://maps.google.com/maps?q=26.8884055,80.9481553&z=17&output=embed" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        
-        <a href="https://maps.app.goo.gl/118ZhEkAdjCfPg5g8" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-            </svg>
-            Get Directions
-        </a>
-    </div>
-</div>
+            <h2>📍 Our Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?q=26.8884055,80.9481553&z=17&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <a href="https://maps.app.goo.gl/118ZhEkAdjCfPg5g8" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                    </svg>
+                    Get Directions
+                </a>
+            </div>
+        </div>
 
         <!-- Branches Section -->
         <div class="branches-section">
             <h2 class="section-title">Our Branches</h2>
-            <div class="branches-container">
-                <!-- Branch 1 -->
-                <div class="branch-card">
-                    <div class="branch-name">Lucknow Office</div>
-                    <div class="branch-info">
-                        <span class="branch-info-label">📍 Location:</span>
-                        <span class="branch-info-value">C-7, Sector 'E' (New), Aliganj, Lucknow, Uttar Pradesh, India - 226024, Uttar Pradesh 226024</span>
-                    </div>
-                    <div class="branch-info">
-                        <span class="branch-info-label">📞 Contact Details:</span>
-                        <span class="branch-info-value">
-                            <a href="tel:+919415158351" class="contact-link">+919415158351</a>
-                        </span>
-                    </div>
-                    <div class="contact-person">
-                        <span class="branch-info-label">👤 Concerned Person:</span>
-                        <span class="branch-info-value">Add Name Here</span>
-                        <span class="branch-info-label">✉️ Email:</span>
-                        <span class="branch-info-value">
-                            <a href="mailto:lucknow@kishoreckishore.com" class="contact-link">lucknow@kishoreckishore.com</a>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Branch 2 -->
-                <div class="branch-card">
-                    <div class="branch-name">Branch 2</div>
-                    <div class="branch-info">
-                        <span class="branch-info-label">📍 Location:</span>
-                        <span class="branch-info-value">Add location details here</span>
-                    </div>
-                    <div class="branch-info">
-                        <span class="branch-info-label">📞 Contact Details:</span>
-                        <span class="branch-info-value">
-                            <a href="tel:+91-XXXX-XXXX-XXXX" class="contact-link">+91-XXXX-XXXX-XXXX</a>
-                        </span>
-                    </div>
-                    <div class="contact-person">
-                        <span class="branch-info-label">👤 Concerned Person:</span>
-                        <span class="branch-info-value">Add Name Here</span>
-                        <span class="branch-info-label">✉️ Email:</span>
-                        <span class="branch-info-value">
-                            <a href="mailto:branch2@kishoreckishore.com" class="contact-link">branch2@kishoreckishore.com</a>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Branch 3 -->
-                <div class="branch-card">
-                    <div class="branch-name">Branch 3</div>
-                    <div class="branch-info">
-                        <span class="branch-info-label">📍 Location:</span>
-                        <span class="branch-info-value">Add location details here</span>
-                    </div>
-                    <div class="branch-info">
-                        <span class="branch-info-label">📞 Contact Details:</span>
-                        <span class="branch-info-value">
-                            <a href="tel:+91-XXXX-XXXX-XXXX" class="contact-link">+91-XXXX-XXXX-XXXX</a>
-                        </span>
-                    </div>
-                    <div class="contact-person">
-                        <span class="branch-info-label">👤 Concerned Person:</span>
-                        <span class="branch-info-value">Add Name Here</span>
-                        <span class="branch-info-label">✉️ Email:</span>
-                        <span class="branch-info-value">
-                            <a href="mailto:branch3@kishoreckishore.com" class="contact-link">branch3@kishoreckishore.com</a>
-                        </span>
-                    </div>
-                </div>
+            <!-- DYNAMIC TARGET CONTAINER -->
+            <div class="branches-container" id="branches-container">
+                <p style="text-align: center; color: #666; grid-column: 1 / -1; padding: 40px 0;">Loading branches...</p>
             </div>
         </div>
     </div>
@@ -628,7 +562,7 @@
     </div>
 
     <script>
-        // Close dropdown when clicking outside
+        // Dropdown behaviors
         document.addEventListener('click', function(event) {
             const isClickInsideNav = event.target.closest('.nav-wrapper');
             if (!isClickInsideNav) {
@@ -639,25 +573,68 @@
             }
         });
 
-        // Toggle dropdown menu
         function toggleDropdown(event, menuId) {
             event.preventDefault();
             const menu = document.getElementById(menuId);
-            
-            // Close all other dropdowns
             const allDropdowns = document.querySelectorAll('.dropdown');
             allDropdowns.forEach(dropdown => {
                 if (dropdown.id !== menuId) {
                     dropdown.classList.remove('show');
                 }
             });
-            
-            // Toggle current dropdown
             if (menu) {
                 menu.classList.toggle('show');
             }
         }
-    </script>
 
+        // --- DYNAMIC BRANCHES FETCHING SCRIPT ---
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby8_Wg_LpwnoHzXmGAA0__IQAHIoC-irB7a8sxhippL0JEe_6Cwwc8FfVjr6Xx2hMpd/exec";
+        const SECRET_KEY = "Kishore&Kishore_Secret_CA!2026";
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const fetchUrl = `${APPS_SCRIPT_URL}?apiKey=${encodeURIComponent(SECRET_KEY)}&type=contact`;
+
+            fetch(fetchUrl)
+                .then(response => response.json())
+                .then(branches => {
+                    const container = document.getElementById("branches-container");
+
+                    if (!branches || branches.length === 0 || branches.error) {
+                        container.innerHTML = '<p style="text-align:center; color:#c0392b; grid-column: 1 / -1;">Unable to load office details.</p>';
+                        return;
+                    }
+
+                    // Dynamically map each branch into your exact HTML card layout
+                    container.innerHTML = branches.map(branch => `
+                        <div class="branch-card">
+                            <div class="branch-name">${branch.BranchName || 'Office'}</div>
+                            <div class="branch-info">
+                                <span class="branch-info-label">📍 Location:</span>
+                                <span class="branch-info-value">${branch.Address || 'N/A'}</span>
+                            </div>
+                            <div class="branch-info">
+                                <span class="branch-info-label">📞 Contact Details:</span>
+                                <span class="branch-info-value">
+                                    <a href="tel:${branch.Phone || ''}" class="contact-link">${branch.Phone || 'N/A'}</a>
+                                </span>
+                            </div>
+                            <div class="contact-person">
+                                <span class="branch-info-label">👤 Concerned Person:</span>
+                                <span class="branch-info-value">${branch["Concerned Person"] || branch.ConcernedPerson || 'N/A'}</span>
+                                <span class="branch-info-label">✉️ Email:</span>
+                                <span class="branch-info-value">
+                                    <a href="mailto:${branch.Email || ''}" class="contact-link">${branch.Email || 'N/A'}</a>
+                                </span>
+                            </div>
+                        </div>
+                    `).join('');
+                })
+                .catch(error => {
+                    console.error("Error fetching branch details:", error);
+                    document.getElementById("branches-container").innerHTML = 
+                        '<p style="text-align:center; color:#c0392b; grid-column: 1 / -1;">Unable to load branch details at this time.</p>';
+                });
+        });
+    </script>
 </body>
 </html>
