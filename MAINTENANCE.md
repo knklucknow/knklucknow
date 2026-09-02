@@ -81,7 +81,7 @@ These tools:
 - `audit-assurance.html` - Audit & Assurance
 - `tax-advisory.html` - Tax Advisory
 - `corporate-advisory.html` - Corporate Advisory
-- `accounting-services.html` - Accounting Services
+- `consultancy-services.html` - Consultancy Services
 
 ### Other Pages
 - `clientele.html` - Clientele/Client Base
@@ -215,7 +215,7 @@ Kishore&Kishore-Website/
 ├── audit-assurance.html       (Services)
 ├── tax-advisory.html          (Services)
 ├── corporate-advisory.html    (Services)
-├── accounting-services.html   (Services)
+├── consultancy-services.html   (Services)
 ├── clientele.html             (Clientele)
 ├── contact-us.html            (Contact)
 └── common-components.js       (SHARED - handles nav/header/footer)

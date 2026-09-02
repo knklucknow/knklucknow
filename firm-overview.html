@@ -18,32 +18,47 @@
         }
 
         /* Top Info Bar */
-        .top-info-bar {
-            background: #1a3a52;
-            color: white;
-            padding: 12px 20px;
-            font-size: 13px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
+.top-info-bar {
+    background: #11293c; /* Deep, authoritative navy blue */
+    color: #d1d5db;
+    padding: 10px 40px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-        .top-info-bar a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.top-info-bar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
 
-        .top-info-bar a:hover {
-            color: #00bcd4;
-        }
+.top-info-bar a:hover {
+    color: #00bcd4;
+}
 
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Vector Icon Styling for Top Bar */
+.top-bar-icon {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: #00bcd4; /* Accent color to draw clean contrast */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
 
         /* Header/Banner Section */
         .header-section {
@@ -57,14 +72,16 @@
         }
 
         .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-shrink: 0;
-        }
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    text-decoration: none; /* Prevents underlines on text */
+    cursor: pointer;
+}
 
         .logo {
-            width: 70px;
+            width: 90px;
             height: 70px;
             background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
             border-radius: 10px;
@@ -371,30 +388,38 @@
 
 <body>
     <!-- Top Info Bar -->
-    <div class="top-info-bar">
-        <div class="info-item">
-            <span>📞</span>
-            <a href="tel:+919415158351">+919415158351</a>
-        </div>
-        <div class="info-item">
-            <span>✉️</span>
-            <a href="mailto:knklucknow@gmail.com">knklucknow@gmail.com</a>
-        </div>
-        <div class="info-item">
-            <span>📍</span>
-            <span>C-7, Sector 'E' (New), Aliganj, Lucknow, Uttar Pradesh, India - 226024</span>
-        </div>
+<div class="top-info-bar">
+    <div class="info-item">
+        <svg class="top-bar-icon" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <a href="tel:+919415158351">+91 9415158351</a>
     </div>
+    <div class="info-item">
+        <svg class="top-bar-icon" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:knklucknow@gmail.com">knklucknow@gmail.com</a>
+    </div>
+    <div class="info-item">
+        <svg class="top-bar-icon" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>C-7, Sector 'E' (New), Aliganj, Lucknow, UP, India - 226024</span>
+    </div>
+</div>
 
     <!-- Header Section with Logo and Navigation -->
     <div class="header-section">
-        <div class="logo-section">
-            <img src="CA_India_Logo.jpg" alt="Kishore & Kishore Logo" class="logo">
-            <div class="firm-info">
-                <h1>Kishore & Kishore</h1>
-                <p>Chartered Accountants</p>
-            </div>
-        </div>
+        <a href="index.html" class="logo-section">
+    <img src="CA_India_Logo.jpg" alt="Kishore & Kishore Logo" class="logo">
+    <div class="firm-info">
+        <h1>Kishore & Kishore</h1>
+        <p>Chartered Accountants</p>
+    </div>
+</a>
 
         <!-- Navigation Menu -->
         <div class="nav-wrapper">
@@ -418,7 +443,7 @@
                         <a class="dropdown-item" href="audit-assurance.html">Audit & Assurance</a>
                         <a class="dropdown-item" href="tax-advisory.html">Tax Advisory</a>
                         <a class="dropdown-item" href="corporate-advisory.html">Corporate Advisory</a>
-                        <a class="dropdown-item" href="accounting-services.html">Accounting Services</a>
+                        <a class="dropdown-item" href="consultancy-services.html">Consultancy Services</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -443,9 +468,9 @@
             <h2>About Our Firm</h2>
             <div class="firm-summary">
     <p>
-    Established in the year <strong>1964, Kishore & Kishore</strong> is one of the well recognized organizations, engaged in providing taxation, auditing and consultancy services on corporate and other related laws. Services encompass <strong>Management Aided Services, Operational System, Taxation Consultancy Services and Accounting Services</strong>. Along with this, the firm also offers <strong>Certifications & IT Services, Corporate Consultancy, Statutory/ Internal/Management Audit Services and Reviews</strong>.
-The services offered by the firm are in conformation with the rules & regulations enacted by Government of India.  The services also meet the business demands of our quality conscious clients. The firm carry out regular training by participating in CPE programs of ICAI. With the assistance of well known retired personnel from various fields such as banks, income tax and other departments, we are able to provide the desired output and advice to the esteemed clients.
-The entire business operation is diligently overviewed by CA. <Strong>S C Kishore</Strong>, the founding partner of the firm. With consistent efforts, the organization is climbing towards pinnacle of success. In addition to this, the effective guidance of the core team members has helped them in offering valuable services to it’s coveted clients. Their offices are based at New Delhi, Lucknow, Bangalore and Mathura. They also have a well nit network of experienced trustworthy professionals all over the country and abroad. The firm has been peer- reviewed 6 times.
+    Established in the year <strong>1964, Kishore & Kishore</strong> is one of the well recognized organizations, engaged in providing taxation, auditing and consultancy services on corporate and other related laws. Services encompass <strong>Management Aided Services, Operational System, Taxation Consultancy Services and Consultancy Services</strong>. Along with this, the firm also offers <strong>Certifications & IT Services, Corporate Consultancy, Statutory/ Internal/Management Audit Services and Reviews</strong>.
+The services offered by the firm are in conformation with the rules & regulations enacted by Government of India.  The services also meet the business demands of our quality conscious clients. The firm carries out regular training by participating in CPE programs of ICAI. With the assistance of well known retired personnel from various fields such as banks, income tax and other departments, we are able to provide the desired output and advice to the esteemed clients.
+The entire operation is diligently overviewed by CA. <Strong>S C Kishore</Strong>, the founding partner of the firm. With consistent efforts, the organization is climbing towards pinnacle of success. In addition to this, the effective guidance of the core team members has helped the firm in offering valuable services to it’s coveted clients. Our offices are based at New Delhi, Lucknow, Bangalore and Mathura. We also have a well knit network of experienced trustworthy professionals all over the country and abroad. The firm has been peer- reviewed 6 times.
     </p>
 </div>
             </div>
