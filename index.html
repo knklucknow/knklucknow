@@ -366,24 +366,24 @@
 
         /* Banner Section */
         .banner {
-    position: relative;
-    width: 100%;
-    padding: 100px 20px 140px; /* Space above and below text */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-}
+            position: relative;
+            width: 100%;
+            padding: 100px 20px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
 
-/* Unified Background Wrapper */
-.hero-section {
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('banner-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Creates seamless parallax effect */
-    width: 100%;
-}
+        /* Unified Background Wrapper */
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('banner-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+        }
 
         .banner-content h1 {
             font-size: 48px;
@@ -404,51 +404,72 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Cover the entire area without stretching */
+            object-fit: cover;
             z-index: 1;
         }
 
         .banner-content {
             position: relative;
-            z-index: 2; /* Ensures text renders above the image */
+            z-index: 2;
         }
 
-        /* Core Values Section */
+        /* --- REDESIGNED CORE VALUES SECTION --- */
         .core-values {
-    background: transparent; /* Remove duplicate image call */
-    padding: 40px 40px 80px;
-    text-align: center;
-}
+            background: transparent;
+            padding: 20px 40px 100px;
+            text-align: center;
+        }
 
         .core-values-container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .core-values-title {
-            color: white;
-            font-size: 42px;
-            font-weight: 700;
+        .core-values-header {
             margin-bottom: 50px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .core-values-title {
+            color: #ffffff;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            margin-bottom: 12px;
+        }
+
+        /* Subtle professional underline accent */
+        .title-accent-line {
+            width: 60px;
+            height: 3px;
+            background: #00bcd4;
+            border-radius: 2px;
         }
 
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .value-card {
-    background: white;
-    padding: 18px 15px; /* Reduced padding (was 30px) */
-    border-radius: 8px; /* Slightly smaller corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for smaller size */
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
-}
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            text-align: left;
+            position: relative;
+            border-top: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         .value-card:nth-child(1) { animation-delay: 0.1s; }
         .value-card:nth-child(2) { animation-delay: 0.2s; }
@@ -456,26 +477,54 @@
         .value-card:nth-child(4) { animation-delay: 0.4s; }
 
         .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            border-top-color: #00bcd4;
         }
 
-        .value-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
+        .icon-container {
+            width: 56px;
+            height: 56px;
+            background: #f0f4f8;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .value-card:hover .icon-container {
+            background: #1a3a52;
+        }
+
+        .value-icon-svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: #1a3a52;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s ease;
+        }
+
+        .value-card:hover .value-icon-svg {
+            stroke: #00bcd4;
         }
 
         .value-card h3 {
-            font-size: 22px;
+            font-size: 20px;
             color: #1a3a52;
-            margin-bottom: 12px;
-            font-weight: 600;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
         }
 
         .value-card p {
             font-size: 14px;
-            color: #666;
-            line-height: 1.7;
+            color: #555555;
+            line-height: 1.6;
         }
 
         @keyframes fadeInUp {
@@ -543,7 +592,7 @@
             }
 
             .banner {
-                height: 300px;
+                padding: 60px 20px 40px;
             }
 
             .banner-content h1 {
@@ -555,13 +604,11 @@
             }
 
             .core-values {
-                padding: 50px 20px;
-                background-attachment: scroll;
+                padding: 30px 20px 60px;
             }
 
             .core-values-title {
                 font-size: 28px;
-                margin-bottom: 30px;
             }
 
             .values-grid {
@@ -609,7 +656,6 @@
                     <button class="nav-link" onclick="toggleDropdown(event, 'about-menu')">About Us</button>
                     <div class="dropdown" id="about-menu">
                         <a class="dropdown-item" href="firm-overview.html">Firm Overview</a>
-                        
                     </div>
                 </li>
                 <li class="nav-item">
@@ -635,48 +681,81 @@
     </div>
 
     <div class="hero-section">
-    <!-- Banner Section -->
-    <div class="banner" id="home">
-        <div class="banner-content">
-            <h1>Kishore & Kishore</h1>
-            <p>Excellence in Chartered Accountancy</p>
+        <!-- Banner Section -->
+        <div class="banner" id="home">
+            <div class="banner-content">
+                <h1>Kishore & Kishore</h1>
+                <p>Excellence in Chartered Accountancy</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Core Values Section -->
-    <div class="core-values">
-        <div class="core-values-container">
-            <h2 class="core-values-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Integrity</h3>
-                    <p>We maintain the highest standards of professional integrity and ethical conduct in all our dealings.</p>
+        <!-- Core Values Section -->
+        <div class="core-values">
+            <div class="core-values-container">
+                <div class="core-values-header">
+                    <h2 class="core-values-title">Our Core Values</h2>
+                    <div class="title-accent-line"></div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">💼</div>
-                    <h3>Expertise</h3>
-                    <p>Our team brings extensive knowledge and experience in accounting, auditing, and financial advisory services.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Client Focus</h3>
-                    <p>We prioritize our clients' needs and deliver customized solutions tailored to their unique business challenges.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🚀</div>
-                    <h3>Innovation</h3>
-                    <p>We embrace modern technologies and innovative approaches to provide cutting-edge financial solutions.</p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="icon-container">
+                            <!-- Shield Icon (Integrity) -->
+                            <svg class="value-icon-svg" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>We maintain the highest standards of professional integrity, transparency, and uncompromised ethical conduct in all financial dealings.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-container">
+                            <!-- Award/Badge Icon (Expertise) -->
+                            <svg class="value-icon-svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="6"/>
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                            </svg>
+                        </div>
+                        <h3>Expertise</h3>
+                        <p>Our team brings extensive domain knowledge and decades of practical experience across auditing, taxation, and financial advisory.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-container">
+                            <!-- Handshake/Users Icon (Client Focus) -->
+                            <svg class="value-icon-svg" viewBox="0 0 24 24">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Client Focus</h3>
+                        <p>We prioritize our clients' goals by building long-term partnerships and delivering customized, strategic solutions for every challenge.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-container">
+                            <!-- Trending/Lightbulb Icon (Innovation) -->
+                            <svg class="value-icon-svg" viewBox="0 0 24 24">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                <polyline points="16 7 22 7 22 13"/>
+                            </svg>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We leverage modern financial technologies and forward-thinking analytical techniques to deliver progressive growth strategies.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
         <p>© 2026 Kishore & Kishore Chartered Accountants. All Rights Reserved.</p>
-        <p style="margin-top: 10px; font-size: 12px;">C-7, Sector 'E' (New), Aliganj, Lucknow, Uttar Pradesh, India - 226024, Uttar Pradesh, India</p>
+        <p style="margin-top: 10px; font-size: 12px;">C-7, Sector 'E' (New), Aliganj, Lucknow, Uttar Pradesh, India - 226024</p>
     </div>
 
     <script>
@@ -710,6 +789,5 @@
             }
         }
     </script>
-
 </body>
 </html>
