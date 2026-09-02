@@ -56,14 +56,16 @@ const commonStyles = `
         }
 
         .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-shrink: 0;
-        }
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    text-decoration: none; /* Prevents underlines on text */
+    cursor: pointer;
+}
 
         .logo {
-            width: 70px;
+            width: 90px;
             height: 70px;
             background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
             border-radius: 10px;
@@ -336,13 +338,13 @@ const headerHTML = `
 
     <!-- Header Section with Logo and Navigation -->
     <div class="header-section">
-        <div class="logo-section">
-            <img src="CA_India_Logo.jpg" alt="Kishore & Kishore Logo" class="logo">
-            <div class="firm-info">
-                <h1>Kishore & Kishore</h1>
-                <p>Chartered Accountants</p>
-            </div>
-        </div>
+        <a href="index.html" class="logo-section">
+    <img src="CA_India_Logo.jpg" alt="Kishore & Kishore Logo" class="logo">
+    <div class="firm-info">
+        <h1>Kishore & Kishore</h1>
+        <p>Chartered Accountants</p>
+    </div>
+</a>
 
         <!-- Navigation Menu -->
         <div class="nav-wrapper">
@@ -366,7 +368,7 @@ const headerHTML = `
                         <a class="dropdown-item" href="audit-assurance.html">Audit & Assurance</a>
                         <a class="dropdown-item" href="tax-advisory.html">Tax Advisory</a>
                         <a class="dropdown-item" href="corporate-advisory.html">Corporate Advisory</a>
-                        <a class="dropdown-item" href="accounting-services.html">Accounting Services</a>
+                        <a class="dropdown-item" href="consultancy-services.html">Consultancy Services</a>
                     </div>
                 </li>
                 <li class="nav-item">
