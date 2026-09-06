@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultancy Services | Kishore & Kishore | Chartered Accountants</title>
+    <title>Legal Consultancy Services | Kishore & Kishore | Chartered Accountants</title>
     <style>
         * {
             margin: 0;
@@ -273,6 +273,69 @@
             font-style: italic;
         }
 
+        /* Tax Advisory Page Content Styling */
+.tax-services-content {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.service-lead {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.service-description {
+    margin-bottom: 32px;
+}
+
+.services-heading {
+    font-size: 22px;
+    color: #11293c;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+}
+
+/* Responsive Service Grid */
+.services-grid-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px 24px;
+}
+
+.services-grid-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #f8fafc;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-weight: 500;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.check-icon {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #00bcd4;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    margin-top: 2px; /* Vertically aligns checkmark with long multiline text */
+}
+
         /* Footer */
         .footer {
             background: #1a3a52;
@@ -404,10 +467,9 @@
                 <li class="nav-item">
                     <button class="nav-link" onclick="toggleDropdown(event, 'services-menu')">Services</button>
                     <div class="dropdown" id="services-menu">
-                        <a class="dropdown-item" href="audit-assurance.html">Audit & Assurance</a>
-                        <a class="dropdown-item" href="tax-advisory.html">Tax Advisory</a>
-                        <a class="dropdown-item" href="corporate-advisory.html">Corporate Advisory</a>
-                        <a class="dropdown-item" href="consultancy-services.html">Consultancy Services</a>
+                        <a class="dropdown-item" href="audit-risk.html">Audit & Risk</a>
+                        <a class="dropdown-item" href="tax-advisory.html">Tax Compliance & Advisory</a>
+                        <a class="dropdown-item" href="consultancy-services.html">Legal Consultancy Services</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -422,25 +484,76 @@
 
     <!-- Service Hero Section -->
     <div class="service-hero">
-        <h1>Consultancy Services</h1>
-        <p>Comprehensive accounting solutions for accurate financial management and reporting</p>
+        <h1>Legal Consultancy Services</h1>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
         <div class="content-section">
-            <h2>Consultancy Services</h2>
-            <div class="placeholder-text">
-                <p>This section is ready for your content. Add detailed information about your Consultancy Services, including:</p>
-                <ul style="margin-top: 10px; margin-left: 20px;">
-                    <li>Bookkeeping and record maintenance</li>
-                    <li>Financial statement preparation</li>
-                    <li>General ledger management</li>
-                    <li>Payroll and HR accounting</li>
-                    <li>Accounts payable and receivable</li>
-                    <li>Bank reconciliation services</li>
-                </ul>
-            </div>
+            <h2>Legal Consultancy Services</h2>
+            <div class="tax-services-content">
+    <p class="service-lead">
+        Every change in our tax laws adds a new layer of complexity to an already intricate landscape. Management in progressive businesses recognizes that taxes are a dynamic item of cost on the balance sheet rather than merely a standard charge against profits.
+    </p>
+
+    <p class="service-description">
+        An effective tax-cost management system provides a distinct competitive advantage—one built on the accurate and judicious application of tax strategies, identified well in time and implemented meticulously. We advise clients on structuring their business with tax-efficient practices, helping lower overall tax burdens through sound professional judgment and deep regulatory expertise.
+    </p>
+
+    <h3 class="services-heading">Our Tax Compliance & Advisory Services</h3>
+
+    <ul class="services-grid-list">
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Domestic Taxation Services (Direct & Indirect Tax Advisory and Compliance)</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Preparation & Verification of Income Tax Returns (Corporations, Partnerships, Individuals & Trusts)</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Preparation & Verification of GST Returns for Businesses</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Strategic Tax Planning & Advisory for Businesses and Business Owners</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+
+            <span>Continuous Guidance on Tax Law & Legislative Changes</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Counsel & Representation before Tax Authorities (Income Tax & GST)</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Transfer Pricing Studies, Documentation, and Certification</span>
+        </li>
+        <li>
+            <svg class="check-icon" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Handling & Defense in Income Tax Search & Seizure Matters</span>
+        </li>
+    </ul>
+</div>
         </div>
     </div>
 
