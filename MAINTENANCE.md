@@ -78,10 +78,10 @@ These tools:
 - `our-values.html` - Our Values
 
 ### Services Section (4 pages)
-- `audit-assurance.html` - Audit & Assurance
-- `tax-advisory.html` - Tax Advisory
+- `audit-risk.html` - Audit & Risk
+- `tax-advisory.html` - Tax Compliance & Advisory
 - `corporate-advisory.html` - Corporate Advisory
-- `consultancy-services.html` - Consultancy Services
+- `consultancy-services.html` - Legal Consultancy Services
 
 ### Other Pages
 - `clientele.html` - Clientele/Client Base
@@ -212,7 +212,7 @@ Kishore&Kishore-Website/
 ├── firm-overview.html         (About Us)
 ├── history-mission.html       (About Us)
 ├── our-values.html            (About Us)
-├── audit-assurance.html       (Services)
+├── audit-risk.html       (Services)
 ├── tax-advisory.html          (Services)
 ├── corporate-advisory.html    (Services)
 ├── consultancy-services.html   (Services)
